@@ -28,3 +28,7 @@ void rm(char **dp_command);
 void exit_f(char **dp_command, t_vars *vars);
 void free_all(t_vars *vars);
 void pwd();
+int parser(char **dp_command);
+int check_ds(char **dp_command, int x);
+void redir_l(char **dp_command);
+char	*ft_strjoin_with_free(char *s1, char *s2);
