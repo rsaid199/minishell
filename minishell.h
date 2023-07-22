@@ -8,6 +8,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <sys/wait.h>
+
+extern char** environ;
 
 typedef struct all_vars
 {
@@ -32,3 +35,7 @@ int parser(char **dp_command);
 int check_ds(char **dp_command, int x);
 void redir_l(char **dp_command);
 char	*ft_strjoin_with_free(char *s1, char *s2);
+void redir_r(char **dp_command);
+void redir_rr(char **dp_command);
+void handler(char **dp_command);
+int set_env_variable(const char* variable, const char* value);

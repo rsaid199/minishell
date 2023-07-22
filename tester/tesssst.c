@@ -4,10 +4,6 @@ int main(int ac, char **av)
 {
     int i = 0;
 
-    while(av[i])
-    {
-        printf("%s\n", av[i]);
-        i++;
-    }
+    printf("hi this is really working\n");
     return 0;
 }
