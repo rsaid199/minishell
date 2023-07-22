@@ -1,0 +1,1 @@
+zsh ls a.out files.txt tesssst.c 

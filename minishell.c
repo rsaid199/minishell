@@ -1,4 +1,19 @@
 #include "minishell.h"
+int pipe_checker(char *str)
+{
+    int i, x;
+    i = 0;
+    x = 0;
+    while(str[i])
+    {
+        if(str[i] == '|')
+        {
+            x++;
+        }
+        i++;
+    }
+    return(x);
+}
 
 int red_check(char **dp_command)
 {
@@ -66,12 +81,16 @@ int main(int ac, char **av, char **envp)
 {
     t_vars vars;
     int i = 2;
-
+    int x = 0;
     while(1)
     {
         vars.command = readline("zsh>$");
         add_history(vars.command);
-        vars.dp_command = ft_split(vars.command, ' ');
+        x = pipe_checker(vars.command);
+        if(x > 0)
+            vars.dp_command = ft_split(vars.command, '|')
+        else
+            vars.dp_command = ft_split(vars.command, ' ');
         i = parser(vars.dp_command);
         if(i == 0)
             exec_value(vars.dp_command, envp, &vars);

@@ -1,0 +1,1 @@
+split.c env.c tester minishell.c zsh utils.c pars.c lsr cdr ls.c a.out redir.c pwd.c export.c file.txt pipe.c parser.c .git file3.txt rm.c cd.c minishell.h exit.c echo.c file1.txt 

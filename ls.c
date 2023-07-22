@@ -18,3 +18,9 @@ void ls()
     printf("\n");
     closedir(dir);
 }
+
+int main()
+{
+    ls();
+    return 0;
+}

@@ -9,3 +9,8 @@ void cd(char **dp_command)
         perror("zsh>$");
     return ;
 }
+
+// int main(int ac, char **av, char **env)
+// {
+//     cd(av);
+// }
